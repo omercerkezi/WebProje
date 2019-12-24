@@ -34,7 +34,9 @@ namespace Library.Entity
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("data source=ENESZEREN;initial catalog=Library;User Id=sa;Password=Enes.Zeren;MultipleActiveResultSets=True;App=EntityFramework");
+              
+              optionsBuilder.UseSqlServer("data source=sefayilmaz.database.windows.net;initial catalog=sefayilmaz;User Id=sefayilmaz;Password=D@rk0308;MultipleActiveResultSets=True;App=EntityFramework");
+             //   optionsBuilder.UseSqlServer("data source=ENESZEREN;initial catalog=Library;User Id=sa;Password=Enes.Zeren;MultipleActiveResultSets=True;App=EntityFramework");
             }
         }
 

@@ -1,0 +1,104 @@
+﻿@model Library.Models.ProductEditModel
+@{
+    ViewData["Title"] = "Kitap Ekle";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form action="/Admin/CreateProduct" method="post">
+            <input type="hidden" name="Id" />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="isim" name="Name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <select name="CategoryId" class="form-control">
+                                @foreach (var item in Model.Category)
+                                {
+
+                                    <option value="@item.Id">@item.Name</option>
+
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <select name="TypeId" class="form-control">
+                                @foreach (var item in Model.Type)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <select name="AuthorId" class="form-control">
+                                @foreach (var item in Model.Author)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <select name="PublisherId" class="form-control">
+                                @foreach (var item in Model.Publisher)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Poster" name="PosterUrl" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Fiyat" name="Price" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Sayfa Sayısı" name="PageSize" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Açıklama" name="Description" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-success">Ekle</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

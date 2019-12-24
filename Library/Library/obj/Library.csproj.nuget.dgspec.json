@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Omer\\Desktop\\VTYS Proje\\u111210003\\Veritabani_proje\\Library\\Library\\Library.csproj": {}
+    "C:\\Github\\library\\Library\\Library\\Library.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Omer\\Desktop\\VTYS Proje\\u111210003\\Veritabani_proje\\Library\\Library\\Library.csproj": {
+    "C:\\Github\\library\\Library\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omer\\Desktop\\VTYS Proje\\u111210003\\Veritabani_proje\\Library\\Library\\Library.csproj",
+        "projectUniqueName": "C:\\Github\\library\\Library\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "C:\\Users\\Omer\\Desktop\\VTYS Proje\\u111210003\\Veritabani_proje\\Library\\Library\\Library.csproj",
-        "packagesPath": "C:\\Users\\Omer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omer\\Desktop\\VTYS Proje\\u111210003\\Veritabani_proje\\Library\\Library\\obj\\",
+        "projectPath": "C:\\Github\\library\\Library\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Github\\library\\Library\\Library\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Omer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

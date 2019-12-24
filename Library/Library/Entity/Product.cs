@@ -16,6 +16,7 @@ namespace Library.Entity
         public bool Status { get; set; }
         public decimal Price { get; set; }
         public int PageSize { get; set; }
+        public string Description { get; set; }
 
         public virtual Author Author { get; set; }
         public virtual Category Category { get; set; }

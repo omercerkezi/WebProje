@@ -1,0 +1,37 @@
+﻿@model List<Library.Entity.Product>
+@{
+    ViewData["Title"] = "Ürünler";
+}
+
+<div class="row">
+    <div class="col-md-2">
+        <a href="/Admin/CreateProduct" class="btn btn-info"> Yeni Kitap Ekle</a>
+    </div>
+</div>
+
+<div class="row admin-products">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="row book-card">
+                <a href="/Admin/EditProduct?id=@item.Id">
+                    <div class="col-md-4">
+                        <img class="img-fluid" src="@item.PosterUrl" />
+                    </div>
+                    <div class="col-md-8">
+                        <p class="name"><strong>@item.Name</strong></p>
+                        <p class="author text-info">@item.Author.Fullname</p>
+                        <p class="publisher text-success">@item.Publisher.Name</p>
+                        <p class="text-warning">@item.Price</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+
+</div>
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@

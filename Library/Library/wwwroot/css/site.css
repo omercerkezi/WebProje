@@ -69,8 +69,11 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
-
+/* CUSTOM CSS BEGIN*/
 .book-card {
     border: 2px solid #333333;
     margin:1px;
+}
+.admin-products {
+    background-color: #dedddd !important;
 }

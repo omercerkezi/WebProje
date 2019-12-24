@@ -1,0 +1,129 @@
+﻿@model Library.Models.ProductEditModel
+@{
+    ViewData["Title"] = "EditProduct";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form action="/Admin/UpdateProduct" method="post">
+            <input type="hidden" value="@Model.Product.Id" name="Id" />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="@Model.Product.Name" placeholder="isim" name="Name" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <select name="CategoryId" class="form-control">
+                                @foreach (var item in Model.Category)
+                                {
+                                    if (item.Id == Model.Product.CategoryId)
+                                    {
+                                        <option selected value="@item.Id">@item.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <select name="TypeId" class="form-control">
+                                @foreach (var item in Model.Type)
+                                {
+                                    if (item.Id == Model.Product.TypeId)
+                                    {
+                                        <option selected value="@item.Id">@item.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <select name="AuthorId" class="form-control">
+                                @foreach (var item in Model.Author)
+                                {
+                                    if (item.Id == Model.Product.AuthorId)
+                                    {
+                                        <option selected value="@item.Id">@item.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <select name="PublisherId" class="form-control">
+                                @foreach (var item in Model.Publisher)
+                                {
+                                    if (item.Id == Model.Product.PublisherId)
+                                    {
+                                        <option selected value="@item.Id">@item.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@item.Id">@item.Name</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="@Model.Product.PosterUrl" placeholder="Poster" name="PosterUrl" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="number" class="form-control" value="@Model.Product.Price" placeholder="Fiyat" name="Price" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="number" class="form-control" value="@Model.Product.PageSize" placeholder="Sayfa Sayısı" name="PageSize" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="@Model.Product.Description" placeholder="Açıklama" name="Description" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-success">Güncelle</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

@@ -14,12 +14,10 @@ namespace Library.Controllers
     // Scaffold-DbContext -Connection "data source=ENESZEREN;initial catalog=Library;User Id=sa;Password=Enes.Zeren;MultipleActiveResultSets=True;App=EntityFramework" -Provider Microsoft.EntityFrameworkCore.SqlServer -OutputDir "Entity/" -Context "Library" –Force
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         LibraryContext _context;
 
-        public HomeController(ILogger<HomeController> logger,LibraryContext libraryContext)
+        public HomeController(LibraryContext libraryContext)
         {
-            _logger = logger;
             _context = libraryContext;
         }
 

@@ -1,0 +1,31 @@
+﻿@model Library.Entity.Product
+@{
+    ViewData["Title"] = "Kitap Detay";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <img class="img-fluid" src="@Model.PosterUrl" />
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="name row"><strong>@Model.Name</strong></div>
+                <br>
+                <div class="author text-info row">@Model.Author.Fullname</div>
+                <br>
+
+                <div class="publisher text-success row">@Model.Publisher.Name</div>
+                <br>
+
+                <div class="text-warning row">@Model.Price</div>
+                <br>
+
+                <div class="row">@Model.Description</div>
+                <div class="btn btn-warning">Satın Al</div>
+            </div>
+      
+        </div>
+    </div>
+</div>
+
